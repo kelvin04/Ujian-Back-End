@@ -1,0 +1,60 @@
+1.Tabel Kamar
+
+a.Get (GET) : http://localhost:1989/kamar
+
+b.Filter (GET) berdasarkan Category : http://localhost:1989/filterkamar?listCategory[]=3
+
+c.Filter (GET) berdasarkan Kamar : http://localhost:1989/filterkamar?listKamar[]=2
+
+d.Input (POST) : http://localhost:1989/kamar
+{
+    "nomorkamar": 10(integer), 
+    "categoryid": 1(integer),
+    "harga": 50000(integer)
+}
+
+e.Update (PUT) : http://localhost:1989/kamar/10
+{
+    "nomorkamar": 10(integer), 
+    "categoryid": 2(integer),
+    "harga": 100000(integer)
+}
+
+f.Delete (DELETE) : http://localhost:1989/kamar/10
+
+
+
+2.Tabel Category
+
+a.Get (GET) : http://localhost:1989/category
+
+b.Filter (GET) : http://localhost:1989/filtercategory?listCategory[]=3
+
+c.Input (POST) : http://localhost:1989/category
+{
+“namacategory”: “President Suite”(string)
+}
+
+d.Update (PUT) Tabel Kamar: http://localhost:1989/category/4
+{
+ “namacategory”: “Deluxe Room”(string)
+}
+
+e.Delete (DELETE) Tabel Kamar: http://localhost:1989/category/4
+
+
+
+3.Tabel User
+
+a.Get User List (GET) : http://localhost:1989/user
+
+b.Register (POST) : http://localhost:1989/register
+{
+"username": "kucing"(string),
+"email": "kucing@gmail.com"(string),
+"password": "test1234"(string),
+"role": "pet"(string)
+}
+
+c.Login (GET) : http://localhost:1989/login?user[]=lucas
+

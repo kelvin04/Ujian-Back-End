@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>HOME</title>
+        <style>
+            body{
+                background: green;
+                font-family: Verdana;
+                color: white;
+                padding: 150px;
+            }
+            h1{
+                font-size: 72px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                text-align: center;
+            }
+            p{
+                text-align: center;
+                font-size: 40px;
+            }
+        </style>
+    </head> 
+    <body>
+        <h2>Halo!</h2>
+        <form id="daftar" method="POST" action="/contact">
+            <!-- ga perlu pake for juga ga masalah -->
+            <label for="namaLengkap">Namamu siapa?</label>
+            <input type="text" name="namaLengkap" value="" />
+            <br/><br/>
+            <label for="Umur">Umur berapa? &nbsp;&nbsp;</label>
+            <input type="text" name="Umur" value="" />
+            <input type="submit" value="D A F T A R" />
+        </form>
+        <br/>
+        <div>
+            <h3>Nama Kamu : <%= nama%></h3>
+            <h3>Usia Kamu : <%= usia%></h3>
+        </div>
+
+    </body>
+</html>
